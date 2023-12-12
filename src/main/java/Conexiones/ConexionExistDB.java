@@ -10,7 +10,7 @@ public class ConexionExistDB {
 
     //Driver para eXist-DB
     private static String driver = "org.exist.xmldb.DatabaseImpl";
-    private static String URI = "xmldb:exist://localhost:8181";
+    private static String URI = "xmldb:exist://localhost:8181/exist/xmlrpc/db";
     private static String usuario = "admin";
     private static String password = "";
 
@@ -31,8 +31,12 @@ public class ConexionExistDB {
 
             //conexion a la coleccion
             col = DatabaseManager.getCollection(URI + "/db", usuario, password);
+            if (col == null) {
+                System.out.println("Error al obtener la colección");
+                return;
+            }
+
             CollectionManagementService service = (CollectionManagementService) col.getService("CollectionManagementService", "1.0");
-            col = service.createCollection("/xml");
 
             //Crear el recurso
             Resource res = col.createResource("familias.xml", "XMLResource");
