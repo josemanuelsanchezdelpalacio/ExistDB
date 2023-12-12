@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a34349c8-5b25-445c-8c3f-3a4b00ac6b85" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/familias.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/proyectosFP.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="a34349c8-5b25-445c-8c3f-3a4b00ac6b85" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/src/main/java/Conexiones/ConexionExistDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Conexiones/ConexionExistDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FP2/ManejoBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FP2/ManejoBD.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +65,24 @@
       <option name="presentableId" value="Default" />
       <updated>1701162295699</updated>
       <workItem from="1701162296795" duration="578000" />
-      <workItem from="1702374070385" duration="2002000" />
+      <workItem from="1702374070385" duration="2240000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1702376215668</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702376215668</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>

@@ -32,7 +32,7 @@ public class ConexionExistDB {
             //conexion a la coleccion
             col = DatabaseManager.getCollection(URI + "/db", usuario, password);
             CollectionManagementService service = (CollectionManagementService) col.getService("CollectionManagementService", "1.0");
-            col = service.createCollection("xml");
+            col = service.createCollection("/xml");
 
             //Crear el recurso
             Resource res = col.createResource("familias.xml", "XMLResource");
@@ -61,7 +61,7 @@ public class ConexionExistDB {
         } catch (IllegalAccessException e) {
             System.out.println("Error al acceder a la base de datos");
         } catch (XMLDBException e) {
-            System.out.println("Error al registrar el driver");
+            throw new RuntimeException(e);
         }
     }
 }
