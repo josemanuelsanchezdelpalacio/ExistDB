@@ -3,14 +3,14 @@ package Conexiones;
 import org.xmldb.api.DatabaseManager;
 import org.xmldb.api.base.*;
 import org.xmldb.api.modules.CollectionManagementService;
-import org.xmldb.api.modules.XMLResource;
 
 import java.io.File;
 
 public class ConexionExistDB {
 
+    //driver para exist-db
     private static String driver = "org.exist.xmldb.DatabaseImpl";
-    private static String URI = "xmldb:exist://localhost:8181/exist/xmlrpc/db/coleccionXML";
+    private static String URI = "xmldb:exist://localhost:8181/exist/xmlrpc";
     private static String usuario = "admin";
     private static String password = "";
 
@@ -18,7 +18,7 @@ public class ConexionExistDB {
 
     public static void conexionExistDb() {
         try {
-            // Carga del driver
+            //carga del driver
             Class cl = Class.forName(driver);
             //instancia de la base de datos
             Database database = (Database) cl.newInstance();
@@ -26,13 +26,12 @@ public class ConexionExistDB {
             DatabaseManager.registerDatabase(database);
 
             //conexion a la coleccion
-            col = DatabaseManager.getCollection(URI, usuario, password);
-            if (col == null) {
-                // Si no existe, la creamos
+            col = DatabaseManager.getCollection(URI + "/db", usuario, password);
+            //si la coleccion no existe se crea
+            if(col == null){
                 CollectionManagementService service = (CollectionManagementService) col.getService("CollectionManagementService", "1.0");
-                service.createCollection("coleccionXML");
+                col = service.createCollection("/coleccionXML");
             }
-
 
             // Crear el recurso
             File file = new File("src/main/resources/familias.xml");
@@ -40,24 +39,24 @@ public class ConexionExistDB {
             if (!file.canRead() || !file2.canRead()) {
                 System.out.println("Error al leer el documento XML.");
             } else {
-                // comprobar si es un archivo
+                //compruebo si es un archivo
                 Resource resource = col.createResource(file.getName(), "XMLResource");
                 Resource resource2 = col.createResource(file2.getName(), "XMLResource");
 
-                // Asignar el recurso a un archivo XML
+                //asigno el recurso a un archivo XML
                 resource.setContent(file);
                 resource2.setContent(file2);
                 System.out.println("Subido los archivos XML a la base de datos eXist");
 
-                // Guardar el recurso
+                //guardo el recurso
                 col.storeResource(resource);
                 col.storeResource(resource2);
                 System.out.println("Guardado el recurso");
             }
 
-            // Cerrar la conexión
+            //cerro la conexion
             col.close();
-            System.out.println("Cerrada la conexión");
+            System.out.println("Cerrada la conexion");
 
         } catch (ClassNotFoundException e) {
             System.out.println("Driver no encontrado");
@@ -66,7 +65,7 @@ public class ConexionExistDB {
         } catch (IllegalAccessException e) {
             System.out.println("Error al acceder a la base de datos");
         } catch (XMLDBException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error de XMLDB en newInstance");
         }
     }
 }

@@ -40,7 +40,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/joses/IdeaProjects/ExistDB",
+    "last_opened_file_path": "C:/Users/Alumno_FP/Desktop/SanchezJoseManuelEv1Ej2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,7 +50,6 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\joses\IdeaProjects\ExistDB" />
       <recent name="C:\Users\Alumno_FP\IdeaProjects\ExistDB\src\main\resources" />
       <recent name="C:\Users\Alumno_FP\IdeaProjects\ExistDB\target" />
       <recent name="C:\Users\Alumno_FP\IdeaProjects\ExistDB\src\main\java" />
@@ -68,9 +67,9 @@
       <option name="presentableId" value="Default" />
       <updated>1701162295699</updated>
       <workItem from="1701162296795" duration="578000" />
-      <workItem from="1702374070385" duration="2240000" />
-      <workItem from="1702395626497" duration="1644000" />
-      <workItem from="1702397274841" duration="1634000" />
+      <workItem from="1702374070385" duration="2413000" />
+      <workItem from="1702465649215" duration="178000" />
+      <workItem from="1702465834204" duration="3729000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -82,11 +81,11 @@
     </task>
     <task id="LOCAL-00002" summary="commit">
       <option name="closed" value="true" />
-      <created>1702396948653</created>
+      <created>1702376485527</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1702396948653</updated>
+      <updated>1702376485527</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
