@@ -19,7 +19,14 @@ public class LeerCSV_Proyectos {
                 String[] comas = linea.split(",");
 
                 Proyecto p = new Proyecto();
-                p.setAutorizacion(comas[0]);
+                p.setCoordinadorCentro(comas[0]);
+                p.setTituloProyecto(comas[1]);
+                p.setAutorizacion(comas[2]);
+                p.setContinuidad(comas[3]);
+                p.setCoordinacion(comas[4]);
+                p.setContacto(comas[5]);
+                p.setCentrosAnexion(comas[6]);
+
                 listaProyectos.add(p);
             }
         } catch (FileNotFoundException e) {

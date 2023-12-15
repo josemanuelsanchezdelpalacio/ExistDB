@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a34349c8-5b25-445c-8c3f-3a4b00ac6b85" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CSVtoXML/Centro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CSVtoXML/EscribirXML.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CSVtoXML/LeerCSV_Centros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CSVtoXML/LeerCSV_Proyectos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CSVtoXML/Proyecto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CentrosCFGMyS.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/proyectos.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSVtoXML/LeerCSV_Centros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSVtoXML/LeerCSV_Centros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSVtoXML/LeerCSV_Proyectos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSVtoXML/LeerCSV_Proyectos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FP2/ManejoBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FP2/ManejoBD.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,21 +42,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Alumno_FP/IdeaProjects/ExistDB/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alumno_FP/IdeaProjects/ExistDB/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Alumno_FP\IdeaProjects\ExistDB\src\main\resources" />
@@ -84,6 +79,7 @@
       <workItem from="1702374070385" duration="2413000" />
       <workItem from="1702465649215" duration="178000" />
       <workItem from="1702465834204" duration="7037000" />
+      <workItem from="1702625667860" duration="1696000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

@@ -21,6 +21,14 @@ public class LeerCSV_Centros {
                 c.setTelefono(Integer.parseInt(separar[2]));
                 c.setCodigoPostal(Integer.parseInt(separar[3]));
                 c.setProvincia(separar[4]);
+                c.setLocalidad(separar[5]);
+                c.setDenomCorta(separar[6]);
+                c.setNombre(separar[7]);
+                c.setDireccion(separar[8]);
+                c.setDenominacion(separar[9]);
+                c.setNaturaleza(separar[10]);
+                c.setCorreo(separar[11]);
+                c.setWeb(separar[12]);
 
                 listaCentros.add(c);
             }
