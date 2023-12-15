@@ -35,10 +35,10 @@ public class ConexionExistDB {
             }
 
             // Crear el recurso
-            File file = new File(Leer.pedirCadena("src/main/resources/familias.xml"));
-            File file2 = new File(Leer.pedirCadena("src/main/resources/proyectosFP.xml"));
-            File centrosFile = new File(Leer.pedirCadena("target/centros.xml"));
-            File proyectosFile = new File(Leer.pedirCadena("target/proyectos.xml"));
+            File file = new File(Leer.pedirCadena("ruta archivo familias.xml (src/main/resources/familias.xml): "));
+            File file2 = new File(Leer.pedirCadena("ruta archivo proyectosFP.xml (src/main/resources/proyectosFP.xml): "));
+            File centrosFile = new File(Leer.pedirCadena("ruta archivo centros.xml (target/centros.xml): "));
+            File proyectosFile = new File(Leer.pedirCadena("ruta archivo proyectos.xml (target/proyectos.xml): "));
 
             if (!file.canRead() || !file2.canRead() || !centrosFile.canRead() || !proyectosFile.canRead()) {
                 System.out.println("Error al leer el documento XML.");
