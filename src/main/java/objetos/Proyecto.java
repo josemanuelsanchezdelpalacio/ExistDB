@@ -1,21 +1,17 @@
-package CSVtoXML;
+package objetos;
 
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = {"coordinadorCentro", "tituloProyecto", "autorizacion", "continuidad", "coordinacion", "contacto", "centrosAnexion"})
 public class Proyecto {
 
     private String coordinadorCentro, tituloProyecto, autorizacion, continuidad, coordinacion, contacto, centrosAnexion;
 
-    public Proyecto(String coordinadorCentro, String tituloProyecto, String autorizacion, String continuidad, String coordinacion, String contacto, String centrosAnexion) {
-        this.coordinadorCentro = coordinadorCentro;
-        this.tituloProyecto = tituloProyecto;
-        this.autorizacion = autorizacion;
-        this.continuidad = continuidad;
-        this.coordinacion = coordinacion;
-        this.contacto = contacto;
-        this.centrosAnexion = centrosAnexion;
+    public Proyecto() {
     }
 
-    public Proyecto() {}
-
+    @XmlElement
     public String getCoordinadorCentro() {
         return coordinadorCentro;
     }
@@ -24,6 +20,7 @@ public class Proyecto {
         this.coordinadorCentro = coordinadorCentro;
     }
 
+    @XmlElement
     public String getTituloProyecto() {
         return tituloProyecto;
     }
@@ -32,6 +29,7 @@ public class Proyecto {
         this.tituloProyecto = tituloProyecto;
     }
 
+    @XmlElement
     public String getAutorizacion() {
         return autorizacion;
     }
@@ -40,6 +38,7 @@ public class Proyecto {
         this.autorizacion = autorizacion;
     }
 
+    @XmlElement
     public String getContinuidad() {
         return continuidad;
     }
@@ -48,6 +47,7 @@ public class Proyecto {
         this.continuidad = continuidad;
     }
 
+    @XmlElement
     public String getCoordinacion() {
         return coordinacion;
     }
@@ -56,6 +56,7 @@ public class Proyecto {
         this.coordinacion = coordinacion;
     }
 
+    @XmlElement
     public String getContacto() {
         return contacto;
     }
@@ -64,24 +65,12 @@ public class Proyecto {
         this.contacto = contacto;
     }
 
+    @XmlElement
     public String getCentrosAnexion() {
         return centrosAnexion;
     }
 
     public void setCentrosAnexion(String centrosAnexion) {
         this.centrosAnexion = centrosAnexion;
-    }
-
-    @Override
-    public String toString() {
-        return "Proyecto{" +
-                "coordinadorCentro='" + coordinadorCentro + '\'' +
-                ", tituloProyecto='" + tituloProyecto + '\'' +
-                ", autorizacion='" + autorizacion + '\'' +
-                ", continuidad='" + continuidad + '\'' +
-                ", coordinacion='" + coordinacion + '\'' +
-                ", contacto='" + contacto + '\'' +
-                ", centrosAnexion='" + centrosAnexion + '\'' +
-                '}';
     }
 }

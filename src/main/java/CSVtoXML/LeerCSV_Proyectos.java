@@ -1,39 +1,72 @@
 package CSVtoXML;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import objetos.Centro;
+import objetos.Centros;
+import objetos.Proyecto;
+import objetos.Proyectos;
+import org.xmldb.api.DatabaseManager;
+import org.xmldb.api.base.Collection;
+import org.xmldb.api.base.Database;
+import org.xmldb.api.base.Resource;
+import org.xmldb.api.base.XMLDBException;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.PatternSyntaxException;
+
+import static CSVtoXML.LeerCSV_Centros.centrosLista;
+import static libs.FicheroEscribible.ficheroEscribible;
 
 public class LeerCSV_Proyectos {
 
-    static List<Proyecto> listaProyectos = new ArrayList<>();
+    static ArrayList<Proyecto> proyectosLista = new ArrayList<>();
 
-    public static void leerProyectos(){
+    public static void leerProyectos() {
+        try {
+            List<String> lineas = Files.readAllLines(Path.of("src/main/resources/proyectos.csv"));
+            lineas.remove(lineas.get(0));
 
-        try(BufferedReader br = new BufferedReader(new FileReader("src/main/resources/proyectos.csv"))){
-            String linea;
-            while ((linea = br.readLine()) != null){
-                String[] comas = linea.split(",");
+            Proyectos proyectos = new Proyectos();
+            for (String linea : lineas) {
+                linea = linea.replaceAll("\"", "").replaceAll("\\[", "").replaceAll("\\]", "");
+                String[] proyecto = linea.split(",");
 
-                Proyecto p = new Proyecto();
-                p.setCoordinadorCentro(comas[0]);
-                p.setTituloProyecto(comas[1]);
-                p.setAutorizacion(comas[2]);
-                p.setContinuidad(comas[3]);
-                p.setCoordinacion(comas[4]);
-                p.setContacto(comas[5]);
-                p.setCentrosAnexion(comas[6]);
+                Proyecto proyectoAux = new Proyecto();
 
-                listaProyectos.add(p);
+                //por si hay campos vacios lo sustituyo con una cadena vacia
+                proyectoAux.setCoordinadorCentro(proyecto.length > 0 ? proyecto[0] : "");
+                proyectoAux.setTituloProyecto(proyecto.length > 1 ? proyecto[1] : "");
+                proyectoAux.setAutorizacion(proyecto.length > 2 ? proyecto[2] : "");
+                proyectoAux.setContinuidad(proyecto.length > 3 ? proyecto[3] : "");
+                proyectoAux.setCoordinacion(proyecto.length > 4 ? proyecto[4] : "");
+                proyectoAux.setContacto(proyecto.length > 5 ? proyecto[5] : "");
+                proyectoAux.setCentrosAnexion(proyecto.length > 6 ? proyecto[6] : "");
+
+                proyectosLista.add(proyectoAux);
+
             }
+
+            proyectos.setProyectos(proyectosLista);
+            try {
+                JAXBContext contexto = JAXBContext.newInstance(Proyectos.class);
+                Marshaller marshaller = contexto.createMarshaller();
+                marshaller.setProperty(marshaller.JAXB_FORMATTED_OUTPUT, true);
+                marshaller.marshal(proyectos, new FileWriter("target/proyectos.xml"));
+                System.out.println("XML Proyectos creado");
+            } catch (JAXBException ex) {
+                System.out.println("La clase seleccionada no permite usar JAXB");
+            }
+
         } catch (FileNotFoundException e) {
             System.out.println("Archivo no encontrado");
         } catch (IOException e) {
-            System.out.println("Error de lectura");
+            System.out.println("Error de lectura o a la hora de transformar");
         }
     }
-
 }
